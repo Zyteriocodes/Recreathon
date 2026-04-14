@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Recreatathon — Git practice</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>Recreatathon</h1>
+      <p class="lead">
+        A tiny static site for practicing Git and hosting. Edit this page, commit, push, and
+        ship.
+      </p>
+      <section class="card" aria-label="Checklist">
+        <h2>Try this</h2>
+        <ul>
+          <li>Create a repo on GitHub / GitLab / Codeberg</li>
+          <li><code>git remote add origin &lt;your-clone-url&gt;</code></li>
+          <li><code>git push -u origin main</code> (or <code>master</code>)</li>
+          <li>Open a branch, change the headline, merge with a PR</li>
+        </ul>
+      </section>
+      <footer>
+        <span id="year"></span> · built for learning Git
+      </footer>
+    </main>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
