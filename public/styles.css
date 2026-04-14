@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  font: 16px/1.5 system-ui, sans-serif;
+  background: #111;
+  color: #eee;
+  padding: 2rem;
+}
+.nav {
+  margin-bottom: 1.5rem;
+}
+.nav a {
+  color: #6cf;
+  margin-right: 1rem;
+}
+.nav a[aria-current="page"] {
+  font-weight: 700;
+  color: #9df;
+}
+main {
+  max-width: 32rem;
+}
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+}
+h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #aaa;
+}
+p {
+  margin: 0 0 1rem;
+}
+.muted {
+  color: #888;
+}
+.panel {
+  margin: 1.25rem 0;
+  padding: 1rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #1a1a1a;
+}
+code {
+  font-size: 0.9em;
+  word-break: break-all;
+}
+.btn {
+  font: inherit;
+  cursor: pointer;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #555;
+  background: #2a2a2a;
+  color: #eee;
+}
+.btn:hover {
+  border-color: #6cf;
+}
+.input {
+  font: inherit;
+  padding: 0.35rem 0.5rem;
+  margin-right: 0.5rem;
+  width: min(100%, 14rem);
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #222;
+  color: #eee;
+}
+.out {
+  margin: 0.75rem 0 0;
+  padding: 0.75rem;
+  font-size: 0.85rem;
+  overflow-x: auto;
+  background: #0d0d0d;
+  border-radius: 6px;
+  border: 1px solid #333;
+}
+footer {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #888;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Health — Recreatathon</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/health.html" aria-current="page">Health</a>
+    </nav>
+    <main>
+      <h1>Health</h1>
+      <p id="status">Checking…</p>
+      <pre id="raw" class="out"></pre>
+      <p><a href="/">← Back</a></p>
+    </main>
+    <script>
+      Promise.all([fetch("/api/health"), fetch("/api/meta")])
+        .then(([h, m]) => Promise.all([h.json(), m.json()]))
+        .then(([health, meta]) => {
+          document.getElementById("status").textContent = health.ok ? "OK" : "Bad";
+          document.getElementById("raw").textContent = JSON.stringify({ health, meta }, null, 2);
+        })
+        .catch(() => {
+          document.getElementById("status").textContent = "Offline (run npm start)";
+        });
+    </script>
+  </body>
+</html>

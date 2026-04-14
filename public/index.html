@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Recreatathon</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/health.html">Health</a>
+    </nav>
+    <main>
+      <h1>Recreatathon</h1>
+      <p>Git practice app — <code>public/</code> is the UI, <code>server/</code> is the API.</p>
+      <p><strong>/api/meta</strong> <code id="api">…</code></p>
+      <section class="panel">
+        <h2>Quote</h2>
+        <p id="quote" class="muted">Click the button.</p>
+        <button type="button" id="quote-btn" class="btn">Random quote</button>
+      </section>
+      <section class="panel">
+        <h2>Echo (POST /api/echo)</h2>
+        <form id="echo-form">
+          <input class="input" name="msg" type="text" placeholder="Type something" required />
+          <button type="submit" class="btn">Send</button>
+        </form>
+        <pre id="echo-out" class="out"></pre>
+      </section>
+      <footer><span id="y"></span></footer>
+    </main>
+    <script src="/app.js" defer></script>
+  </body>
+</html>
